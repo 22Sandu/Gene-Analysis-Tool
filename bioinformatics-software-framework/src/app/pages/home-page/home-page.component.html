@@ -1,0 +1,85 @@
+<br>
+<div class="col-sm-12">
+  <div class="row">
+    <div  class="col-sm-3">
+
+      <div class="form-group">
+        <div class="panel panel-default">
+          <div class="panel-body"><b>Components </b>
+          </div>
+        </div>
+        <datalist id="productName">
+          <option value="Pen">Pen</option>
+          <option value="Pencil">Pencil</option>
+          <option value="Paper">Paper</option>
+        </datalist>
+      </div>
+
+      <hr>
+
+      <app-tree-view (select)="selectTree($event)"></app-tree-view>
+
+      <hr>
+
+      <div class="panel panel-default">
+        <div class="panel-body" id="description"><b>Description: </b>{{activeTreeItem ? activeTreeItem.description :
+          ''}}<span id="text"></span>
+        </div>
+      </div>
+      <hr>
+      <div>
+        <button type="button" class="btn btn-block btn-secondary" (click)="addStep()"
+                [disabled]="!activeTreeItem || !activeTreeItem.isStep">
+          Add
+          <!--<i class='glyphicon glyphicon-info-sign' data-toggle="popover" data-trigger="hover" data-placement="right"-->
+             <!--data-content="Select a component and click here to add it"></i>-->
+        </button>
+      </div>
+      <br>
+      <div>
+
+        <button type="button" class="btn btn-block btn-secondary" (click)="execute()">
+          Execute
+          <!--<i class='glyphicon glyphicon-info-sign' data-toggle="popover" data-trigger="hover" data-placement="right"-->
+             <!--data-content="Click here to view results"></i>-->
+        </button>
+
+      </div>
+      <br>
+      <div>
+
+        <button type="button" class="btn btn-block btn-secondary" (click)="clearUI()">
+          Clear
+          <!--<i class='glyphicon glyphicon-info-sign' data-toggle="popover" data-trigger="hover" data-placement="right"-->
+             <!--data-content="Click here to view results"></i>-->
+        </button>
+
+      </div>
+
+      <hr>
+
+      <div class="panel panel-default">
+        <div class="panel-body" id="options" >
+        <b>Options</b>
+        <br>
+        <br>
+        <span id="options-value">
+          <label class="col-md-4 control-label" style="font-size: 14px;width: 40px">Enter {{activeTreeItem ? activeTreeItem.inputs[0].name :
+              ''}}</label>
+        </span>
+      </div></div>
+      
+    </div>
+    <div class="col-sm-9">
+      <app-drawing-board></app-drawing-board>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <br>
+    <app-pairwise-blast></app-pairwise-blast>
+    <app-clustal-omega-msa></app-clustal-omega-msa>
+    <app-bar-graph></app-bar-graph>
+    <app-dialign-msa></app-dialign-msa>
+    <app-t-coffee-msa></app-t-coffee-msa>
+  </div>
+</div>

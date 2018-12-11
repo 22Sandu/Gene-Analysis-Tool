@@ -1,0 +1,32 @@
+{
+  "name": "website-using-express",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "nodemon --exec babel-node --plugins transform-class-properties --presets es2015 server.js",
+    "test": "babel-node --plugins transform-class-properties --presets es2015 testing.js"
+  },
+  "dependencies": {
+    "blastjs": "^1.5.3",
+    "body-parser": "^1.18.2",
+    "chart.js": "^2.7.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "interact-js": "^2.0.1",
+    "js-call-r": "0.0.4",
+    "mongodb": "^3.0.1",
+    "node-cmd": "^3.0.0",
+    "node-fetch": "^2.1.2",
+    "python-shell": "^0.4.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "nodemon": "^1.11.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1"
+  }
+}

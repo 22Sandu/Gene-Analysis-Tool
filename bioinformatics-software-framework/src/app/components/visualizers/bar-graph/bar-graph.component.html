@@ -1,0 +1,13 @@
+<div *ngIf="active">
+  <button class="btn btn-secondary" (click)="viewRaw()">View Raw Result</button>
+</div>
+<div>
+  <div id="bar-graph"></div>
+</div>
+<app-modal #barGraphViewRaw [width]="'80%'">
+  <modal-header>Bar Graph Result</modal-header>
+  <modal-body>
+    <pre>{{data}}</pre>
+  </modal-body>
+  <modal-footer></modal-footer>
+</app-modal>

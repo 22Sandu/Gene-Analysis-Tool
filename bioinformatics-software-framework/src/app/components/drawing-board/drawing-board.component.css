@@ -1,0 +1,29 @@
+.drawing-board {
+  width: 100%;
+  height: 80vh;
+  border: 1px solid #585858;
+  overflow: scroll;
+}
+
+.drawing-surface {
+  background: url('/assets/vectorstash-grid.svg') repeat;
+  background-size: 800px;
+  transform-origin: left;
+  /*transform: scale(0.5);*/
+}
+
+.jtk-surface {
+  height: 500vh;
+  width: 500vw;
+  overflow: hidden !important;
+  position: relative;
+  cursor: move;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  touch-action: none;
+}
+
+.jtk-surface-nopan {
+  overflow: scroll !important;
+  cursor: default;
+}

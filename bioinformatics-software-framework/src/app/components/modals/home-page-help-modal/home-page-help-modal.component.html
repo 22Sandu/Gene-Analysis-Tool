@@ -1,0 +1,85 @@
+<!-- Modal -->
+<div modal="home-page-help" class="modal fade" role="dialog">
+  <div class="modal-dialog" style="z-index: 9999999" role="document">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">BioWorkflow Help Desk</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div *ngIf="helpStep==1" class="modal-body" ngTemplateOutlet="">
+        <h3>Taking user input to the workflow</h3>
+        <hr>
+        <ol>
+          <li>Click on <b>User Input</b></li>
+          <li>Add it to the Canvas</li>
+          <li>Click on <b>Sequence</b>
+            <ul>
+              <li>Add a test sequence</li>
+              <li>Add multiple sequences for MSA</li>
+            </ul>
+          </li>
+          <li>Paste your sequence</li>
+          <hr>
+          <img class="img-fluid" src="/assets/drawing-page/user-input.png" alt="">
+        </ol>
+
+      </div>
+
+      <div *ngIf="helpStep==2" class="modal-body">
+        <h3>Connecting components in the work flow</h3>
+        <hr>
+        <ol>
+          <li>Add two or more components</li>
+          <hr>
+          <img class="img-fluid" src="/assets/drawing-page/connect-1.png" alt="">
+          <hr>
+          <li>Click on one component</li>
+          <hr>
+          <img class="img-fluid" src="/assets/drawing-page/connect-2.png" alt="">
+          <hr>
+          <li>Click on the other component</li>
+          <hr>
+          <img class="img-fluid" src="/assets/drawing-page/connect-3.png" alt="">
+        </ol>
+      </div>
+
+      <div *ngIf="helpStep==3" class="modal-body">
+        <h3>Visualizing resulting DNA sequences</h3>
+        <hr>
+        <ol>
+          <li>Add <b>User Input</b> component</li>
+          <li>Add <b>Clustal Omega</b> components (For MSA)</li>
+          <li>Connect to <b>Visualize</b> component</li>
+          <hr>
+          <img class="img-fluid" src="/assets/drawing-page/vis-1.png" alt="">
+          <hr>
+          <li>Enter the sequences in the User Input</li>
+          <hr>
+          <img class="img-fluid" src="/assets/drawing-page/vis-2.png" alt="">
+          <hr>
+          <li>Press Execute</li>
+          <hr>
+          <img class="img-fluid" src="/assets/drawing-page/vis-3.png" alt="">
+          <hr>
+          <li>Visualization can be seen at the bottom</li>
+          <hr>
+          <img class="img-fluid" src="/assets/drawing-page/vis-4.png" alt="">
+        </ol>
+      </div>
+
+      <div class="modal-footer">
+        <div class="text-center">
+          <button (click)="prevHelpModalStep()" type="button" class="btn btn-clear btn-secondary"><<</button>
+          <button (click)="nextHelpModalStep()" type="button" class="btn btn-clear btn-secondary">>></button>
+        </div>
+        <br>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

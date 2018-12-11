@@ -1,0 +1,13 @@
+<div *ngIf="active">
+  <button class="btn btn-secondary" (click)="viewRaw()">View Raw Result</button>
+</div>
+<div>
+  <div *ngIf="data" [innerHTML]="data.content | keepHtml"></div>
+</div>
+<app-modal #tCoffeeViewRaw [width]="'80%'">
+  <modal-header>T-Coffee Result</modal-header>
+  <modal-body>
+    <pre *ngIf="data">{{data.rawContent}}</pre>
+  </modal-body>
+  <modal-footer></modal-footer>
+</app-modal>

@@ -1,0 +1,13 @@
+<div *ngIf="active">
+  <button class="btn btn-secondary" (click)="viewRaw()">View Raw Result</button>
+</div>
+<div>
+  <pre>{{data}}</pre>
+</div>
+<app-modal #dialignViewRaw [width]="'80%'">
+  <modal-header>DIALIGN Result</modal-header>
+  <modal-body>
+    <pre>{{data}}</pre>
+  </modal-body>
+  <modal-footer></modal-footer>
+</app-modal>

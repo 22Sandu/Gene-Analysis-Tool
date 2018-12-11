@@ -1,0 +1,43 @@
+<div class="container">
+  <div [ngClass]="{'clicked': step.clicked}" [id]="step.stepId" class="item">
+    <div class="h6" style="text-align: center">
+      {{step.text}}
+      <span (click)="onStepRemove($event)"><i class="fas fa-times"></i></span>
+    </div>
+    <hr>
+    <button class="btn btn-block btn-secondary" *ngFor="let input of step.inputs; let i = index"
+            (click)="onInputPress($event, 'dialog_'+step.stepId+'_'+i)" style="background-color: rgb(180, 180, 180);color: black;">{{input.name}}
+    </button>
+    <hr>
+    <div (click)="onBoxClick($event)" style="text-align: center">
+      <i class="fas fa-link"></i>
+
+    </div>
+
+
+    <div class="form-horizontal" *ngFor="let input of step.inputs; let i = index" style="display: none"
+          id="dialog_{{step.stepId}}_{{i}}"
+          title="Provide {{input.name}}">
+      <fieldset>
+        <div class="form-group row">
+          <label class="col-md-4 control-label" style="font-size: 14px;width: 40px">Enter {{input.name}}</label>
+          <div class="col-md-8">
+
+            <textarea *ngIf="input.type == 'text'" [(ngModel)]="input['tempValue']" class="form-control" rows="1"
+                      style="width: 100%; font-size: 14px"></textarea>          
+
+            <select *ngIf="input.type == 'select'" class="form-control" [(ngModel)]="input['tempValue']">
+              <option *ngFor="let selector of input.selectors" value="{{selector}}" [attr.selected]="input['tempValue'] == selector  ? true : null">{{selector}}</option>
+            </select>
+
+          <br>
+          </div>
+          <div style="float: center">
+            <button (click)="onDialogCancel(input, 'dialog_'+step.stepId+'_'+i)" class="btn btn-secondary">Cancel</button>
+            <button (click)="onDialogOk(input, 'dialog_'+step.stepId+'_'+i)" class="btn btn-secondary">Ok</button>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>

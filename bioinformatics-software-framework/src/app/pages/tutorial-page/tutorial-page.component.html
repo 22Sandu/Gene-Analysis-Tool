@@ -1,0 +1,235 @@
+<br>
+<div class="col-sm-12">
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Introduction</h4>
+    <hr>
+    <div>
+      <iframe width="80%" style="margin: 0 auto; display: block;" height="480"
+              src="https://www.youtube.com/embed/3Xs7S3r_Eo0?ecver=1" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+    </div>
+    <hr>
+    <h4 class="alert-heading">Tutorial</h4>
+    <hr>
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#intro" aria-expanded="true"
+                    aria-controls="collapseOne">
+              Basic Molecular Genetics
+            </button>
+          </h5>
+        </div>
+
+        <div id="intro" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body col-sm-12 col-sm-offset-1" style="margin-left: 13px;">
+            <h5>DNA Structure</h5>
+            <iframe width="80%" height="480" style="margin: 0 auto; display: block;"
+                    src="https://www.youtube.com/embed/C1CRrtkWwu0?ecver=1" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <br>
+            <p>DNA stands for <b><u>d</u>eoxyribo<u>n</u>ucleic <u>a</u>cid</b> and it contains the information
+              that determines inherited characteristics. DNA is made up of repeating subunits called <b>nucleotides</b>. Nucleotides are made up of the
+              following three basic units.</p>
+              <ol>
+                <li>A phosphate group</li>
+                <li>A sugar named <b>deoxyribose</b></li>
+                <li>A nitrogen base</li>
+              </ol>
+
+            <p>There are four nitrogen bases in DNA. They are</p>
+              <ol>
+                <li><b>Adenine (A)</b></li>
+                <li><b>Thymine (T)</b></li>
+                <li><b>Cytosine (C)</b></li>
+                <li><b>Guanine (G)</b></li>
+              </ol>
+
+            <h5>Genetic Information</h5>
+            <p>Genetic information is packed in to <b>chromosomes</b> inside the nucleus of the cells of higher
+              organisms (Eukaryotes).</p>
+            <p>A chromosome consists of a single, very long <b>DNA helix</b> on which thousands of <b>genes</b>
+              are encoded. Every human cell has 46 molecules of double-stranded DNA. These DNA molecules are coiled
+              to form 23 pairs of chromosomes.</p>
+            <p></p>
+            <p><img style="margin: 0 auto; display: block;"
+                 src="http://3.bp.blogspot.com/-CfTgV4grh38/UyfjgiMNG_I/AAAAAAAAC58/2KYesHLAvP8/s1600/ADN+gene.png" alt="">
+            </p>
+            <p><b>Genes</b> are the working subunits of DNA that contain a particular set of instructions, usually
+              coding for a particular <b>protein</b> or for a particular function.
+              In humans, genes vary in size from 100 to more than 2 million base pairs.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+              Pairwise Sequence Alignment
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body col-sm-12 col-sm-offset-1" style="margin-left: 13px;">
+            <h5>What is Pairwise Sequence Alignment?</h5>
+            <p><b>Sequence alignment</b> is a method of arranging biological sequences to identify regions of
+              similarity. The similarity being identified, may be a result of functional, structural, or evolutionary
+              relationships between the sequences.</p>
+            <p><b>Pairwise sequence alignment</b> is one form of a sequence alignment technique, where we compare only two
+              sequences. This process involves finding the optimal alignment between the two sequences, scoring based on
+              their similarity (how similar they are) or distance (how different they are), and then assessing the
+              significance of this score.</p>
+            <img style="margin: 0 auto; display: block;" src="http://compbio.pbworks.com/f/2psa.bmp" alt="">
+            <p>The basis of sequence alignment lies with the scoring process, where the two sequences are given a score
+              on how similar (or different) they are to each other. The pairwise sequence alignment algorithms require a
+              scoring matrix to keep track of the scores assigned. The scoring matrix assigns a positive score for a
+              match, and a penalty for a mismatch.</p>
+            <h6>Three basic aspects are considered when assigning scores. They are,</h6>
+            <ol>
+              <li><b>Match value</b> — Value assigned for matching characters</li>
+              <li><b>Mismatch value</b> — Value assigned for mismatching characters</li>
+              <li><b>Gap penalty</b> — Value assigned for spaces</li>
+            </ol>
+
+            <p>Let us consider a simple example to understand sequence alignment. We are provided with two
+              sequences <b>ACTCG</b> and <b>ATTC</b>. We can align them as shown below.</p>
+            <img style="margin: 0 auto; display: block;"
+                 src="https://cdn-images-1.medium.com/max/1200/1*2Wh0jTmRhXLcJQsHhirviw.png" alt="">
+            <p>The first character of the two sequences is a <b>match</b>, as both are letter A. The second character of
+              the first sequence is C and that of the second sequence is T. So, it is a <b>mismatch</b>.
+              A space is introduced at the end of the second sequence to match with G. This space is known as a
+              <b>gap</b>.</p>
+
+            <p>Some well-known tools which utilize pairwise-sequence alignment algorithms to find matching sequences
+              are, </p>
+            <ol>
+              <li><b>FASTA</b> (FAST Alignment)</li>
+              <li><b>BLAST</b> (Basic Local Alignment Search Tool)</li>
+            </ol>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
+              Multiple Sequence Alignment
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body col-sm-12 col-sm-offset-1" style="margin-left: 13px;">
+            <h5>What is Multiple Sequence Alignment?</h5>
+            <p>In multiple sequence alignment (MSA) we try to align three or more related sequences so as to achieve
+              maximal matching between them. The goal of MSA is to arrange a set of sequences in such a way that as many
+              characters from each sequence are matched according to some scoring function.</p>
+            <img style="margin: 0 auto; display: block;"
+                 src="https://openi.nlm.nih.gov/imgs/512/94/2921379/PMC2921379_1756-0500-3-199-1.png" alt="">
+            <br>
+            <p>The scoring process of MSA is based on the sum of the scores of all possible pairs of sequences in the
+              multiple alignment according to a scoring scheme.
+            </p>
+            <br>
+            <div style="text-align: center">
+              <strong>Score of multiple alignment = ∑ score(A, B)</strong>
+              <br>
+              where score(A, B) = pair-wise alignment score of A, B
+            </div>
+            <br>
+            <h5>Example</h5>
+            <p>Consider the following scoring scheme.</p>
+            <ul>
+              <li>A match gives you +1</li>
+              <li>A	mismatch gives you 0</li>
+              <li>A gap costs −1</li>
+            </ul>
+            <p>Let us see how we can calculate the alignment score for the 3 sequences <b>ATGGCAG</b>,
+              <b>ATGGC</b> and <b>GGCT</b>. We can align the sequences as follows.</p>
+            <pre>
+              Sequence 1:    A   T   G   G   C   A   G
+              Sequence 2:    A   T   G   G   C   _   _
+              Sequence 3:    _   _   G   G   C   T   _</pre>
+            <p>score(Seq 1, Seq 2) = 1 + 1 + 1 + 1 + 1 + (-1) + (-1) = 3
+            <br>score(Seq 1, Seq 3) = (-1) + (-1) + 1 + 1 + 1 + 0 + (-1) = 0
+            <br>score(Seq 2, Seq 3) = (-1) + (-1) + 1 + 1 + 1 + (-1) = 0</p>
+            <p>
+              Score of multiple alignment = ∑ score(A, B) = score(Seq 1, Seq 2) + score(Seq 1, Seq 3)
+              + score(Seq 2, Seq 3) = 3 + 0 + 0 = <b>3</b></p>
+            <p>
+              The goal of MSA is to achieve the maximum alignment score.
+            </p>
+            <h5>Three of the popular MSA tools used at present are,</h5>
+            <ol>
+              <li>Clustal Omega</li>
+              <li>T-Coffee</li>
+              <li>DIALIGN</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                      aria-expanded="false" aria-controls="collapseThree">
+                Bioinformatics Workflows
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body col-sm-12 col-sm-offset-1" style="margin-left: 13px;">
+              <h5>What is a Workflow?</h5>
+              <p>A <b>workflow</b> consists of a set of activities which enables the systematic organization of
+                resources that transform materials, provide services, or process information. It can be depicted as a
+                sequence of operations to complete a process. It is similar to a pipeline where the output of
+                one element is used as the input of the next element.</p>
+              <h5>What are Bioinformatics Workflows?</h5>
+              <p><b>Bioinformatics workflows</b> are used to organize a sequence of activities related to biological
+                data. They consist of a series of computational or data manipulation steps that are related to
+                bioinformatics analyses. </p>
+              <p>Workflows are visualized in the form of workflow diagrams, depicting inputs, outputs, services and
+                data flows. </p>
+              <p>Given below is a simple workflow where a user can input a sequence, perform BLAST search,
+                get the matching sequences and visualize them. User input, BLAST and visualization are represented
+                as tasks and the edges connecting these tasks represent the data flow.</p>
+              <img class="img-fluid" src="../../../assets/tutorial-page/SampleWorkflow.png"
+                   style="width: 700px; height: auto; margin: 0 auto; display: block;" alt="">
+              <br><br>
+              <p>Similarly, complex workflows can be created and the results can be visualized.</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--<div class="card">-->
+        <!--<div class="card-header" id="headingThree">-->
+          <!--<h5 class="mb-0">-->
+            <!--<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"-->
+                    <!--aria-expanded="false" aria-controls="collapseThree">-->
+              <!--Collapsible Group Item #3-->
+            <!--</button>-->
+          <!--</h5>-->
+        <!--</div>-->
+        <!--<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">-->
+          <!--<div class="card-body">-->
+            <!--Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon-->
+            <!--officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3-->
+            <!--wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.-->
+            <!--Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan-->
+            <!--excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt-->
+            <!--you probably haven't heard of them accusamus labore sustainable VHS.-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>

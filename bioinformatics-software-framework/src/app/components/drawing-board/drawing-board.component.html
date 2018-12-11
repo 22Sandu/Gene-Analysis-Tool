@@ -1,0 +1,6 @@
+<div class="drawing-board">
+  <div (click)="onBoardClick()" class="drawing-surface jtk-surface-nopan jtk-surface">
+    <app-step-box (remove)="onStepRemove($event)" (boxClick)="onBoxClick($event)" *ngFor="let step of steps"
+                  [step]="step"></app-step-box>
+  </div>
+</div>

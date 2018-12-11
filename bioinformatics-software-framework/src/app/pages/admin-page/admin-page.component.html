@@ -1,0 +1,17 @@
+<br>
+<div class="col-sm-4">
+  <div class="well">
+    <ul class="list-group">
+      <li class="list-group-item" routerLink="create" routerLinkActive="active">Add Component</li>
+      <li class="list-group-item" routerLink="manage" routerLinkActive="active">Manage Components</li>
+    </ul>
+  </div>
+</div>
+<div class="col-sm-8">
+  <router-outlet></router-outlet>
+</div>
+<app-modal #helloModal>
+  <modal-header>Under Construction</modal-header>
+  <modal-body>We are not done yet!! <br> Hope to see you soon.</modal-body>
+  <modal-footer></modal-footer>
+</app-modal>
