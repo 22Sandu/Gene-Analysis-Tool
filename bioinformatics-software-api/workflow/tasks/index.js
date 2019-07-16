@@ -11,6 +11,7 @@ import MaxAling from './max-align';
 import NetPhos from './net-phos';
 import ProP from './prop';
 import SignalP from './signal-p';
+import SVM from './svm';
 
 export {
     Data,
@@ -22,5 +23,6 @@ export {
     MaxAling,
     NetPhos,
     ProP,
-    SignalP
+    SignalP,
+    SVM
 }

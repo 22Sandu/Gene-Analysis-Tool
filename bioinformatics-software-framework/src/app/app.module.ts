@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { RouterModule, RouteReuseStrategy }   from '@angular/router';
+import { RouterModule, RouteReuseStrategy } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -31,6 +31,7 @@ import { DialignMsaComponent } from './components/visualizers/dialign-msa/dialig
 import { TCoffeeMsaComponent } from './components/visualizers/t-coffee-msa/t-coffee-msa.component';
 import { EscapeHtmlPipe } from './configs/EscapeHtmlPipe';
 import { FormsPageComponent } from './pages/forms-page/forms-page.component';
+import { SvmComponent } from './components/visualizers/svm/svm.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { FormsPageComponent } from './pages/forms-page/forms-page.component';
     DialignMsaComponent,
     TCoffeeMsaComponent,
     EscapeHtmlPipe,
-    FormsPageComponent
+    FormsPageComponent,
+    SvmComponent
   ],
   imports: [
     BrowserModule,

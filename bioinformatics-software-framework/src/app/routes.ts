@@ -33,7 +33,9 @@ export const routes = [
           path: 'form',
           component: FormsPageComponent
         },
-        {path: "about-us", component: AboutUsComponent},
+        {
+          path: 'about-us',
+          component: AboutUsComponent},
         {
           path: 'admin',
           component: AdminPageComponent,

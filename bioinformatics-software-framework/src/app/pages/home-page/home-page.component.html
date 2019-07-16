@@ -1,3 +1,6 @@
+<style media="all">
+  #resultPanel {border-top: 10px solid #5a6370; margin-top:10px;}
+</style>
 <br>
 <div class="col-sm-12">
   <div class="row">
@@ -60,26 +63,30 @@
 
       <div class="panel panel-default">
         <div class="panel-body" id="options" >
-        <b>Options</b>
-        <br>
-        <br>
-        <span id="options-value">
-          <label class="col-md-4 control-label" style="font-size: 14px;width: 40px">Enter {{activeTreeItem ? activeTreeItem.inputs[0].name :
-              ''}}</label>
-        </span>
-      </div></div>
+          <b>Options</b>
+          <br>
+          <br>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea2">Enter <b>{{activeTreeItem ? activeTreeItem.inputs[0].name : ''}}</b></label>
+            <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
       
     </div>
     <div class="col-sm-9">
       <app-drawing-board></app-drawing-board>
     </div>
   </div>
-  <div class="col-sm-12">
-    <br>
-    <app-pairwise-blast></app-pairwise-blast>
-    <app-clustal-omega-msa></app-clustal-omega-msa>
-    <app-bar-graph></app-bar-graph>
-    <app-dialign-msa></app-dialign-msa>
-    <app-t-coffee-msa></app-t-coffee-msa>
+  <div id = "resultPanel" class="col-sm-12">
+    <div class="row">
+      <br>
+      <app-pairwise-blast></app-pairwise-blast>
+      <app-clustal-omega-msa></app-clustal-omega-msa>
+      <app-bar-graph></app-bar-graph>
+      <app-dialign-msa></app-dialign-msa>
+      <app-t-coffee-msa></app-t-coffee-msa>
+      <app-svm></app-svm>
+    </div>
   </div>
 </div>

@@ -10,18 +10,17 @@ export class ExecuteFlowService {
   constructor(private http: Http) {
   }
 
-  executeFlow(steps) {
+  async executeFlow(steps) {
     const headers: Headers = new Headers();
 
     headers.append('content-type', 'application/json');
-    console.log('steps',steps);
-    return this.http.post(
-      `${config.apiUrl}/api/flow`,
-      {
-        steps: steps
-      }, {
+    console.log('steps', steps);
+    const response = await this.http.post(`${config.apiUrl}/api/flow`, {
+      steps: steps
+    }, {
         headers: headers
-      }).toPromise().then(response => response.json())
+      }).toPromise();
+    return response.json();
   }
 
 }

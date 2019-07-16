@@ -11,8 +11,12 @@ export default function run(step) {
             return (new Task.Data(step.params[0].value)).execute();
             break;
         case 'BLAST':
-            // TODO get blast params
+            // TODO get svm params
             return (new Task.Blast(`blast`)).execute(step.parentResults[0]);
+            break;
+        case 'SVM':
+            // TODO get blast params
+            return (new Task.SVM(`svm`)).execute();
             break;
         case 'Clustal Omega':
             return (new Task.ClustalOmega()).execute(step.parentResults[0]);
